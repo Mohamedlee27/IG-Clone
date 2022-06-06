@@ -19,3 +19,5 @@ class PostCreate(CreateView):
 
 class CommentForm(forms.Form):
 	comment = forms.CharField()
+
+    
