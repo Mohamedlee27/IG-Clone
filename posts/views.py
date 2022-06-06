@@ -8,3 +8,14 @@ from django import forms
 from posts.models import Post, Comment
 
 # Create your views here.
+
+class PostList(ListView):
+	model = Post
+
+class PostCreate(CreateView):
+	model = Post
+	fields = ['image', 'description', 'author']
+	success_url = '/'
+
+class CommentForm(forms.Form):
+	comment = forms.CharField()
